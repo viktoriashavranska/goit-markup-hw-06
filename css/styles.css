@@ -892,9 +892,9 @@ span {
 }
 .is-open {
   opacity: 1;
-  visibility: visible;
   pointer-events: auto;
 }
+
 .modal {
   padding: 72px 16px 24px 16px;
   position: absolute;
@@ -936,7 +936,7 @@ span {
 }
 .modal-close-icon:hover .butkasvg,
 .modal-close-icon:focus .butkasvg {
-  fill: #ffffff;
+  fill: rgb(255, 255, 255);
 }
 .modal-text {
   font-weight: 500;
@@ -1080,5 +1080,6 @@ span {
   .modal {
     width: 408px;
     min-height: 584px;
+    padding: 72px 24px 24px 24px;
   }
 }
