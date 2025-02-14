@@ -413,7 +413,9 @@ body {
 /*two*/
 
 .about {
-  padding: 96px 0;
+  background-color: #ffffff;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 .visually-hidden {
   position: absolute;
@@ -427,74 +429,75 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-.about {
-  margin: 0 auto;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.1;
-  letter-spacing: 0.02em;
-  color: #2e2f42;
-  margin-bottom: 8px;
-  display: block;
-  text-align: center;
-}
+
 .list-info {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-wrap: wrap;
   gap: 72px;
 }
 .card-icon {
   display: none;
 }
 .info-text {
+  color: #434455;
   font-weight: 500;
   font-size: 16px;
+  letter-spacing: 0.02em;
+  text-align: left;
   line-height: 1.5;
-  letter-spacing: 0.019em;
-  color: #434455;
+}
+.info-page {
+  color: #2e2f42;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-align: center;
+  line-height: 1.11;
+  margin-bottom: 8px;
 }
 @media screen and (min-width: 768px) {
+  .about {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
   .list-info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-    row-gap: 72px;
+    gap: 72px 24px;
   }
   .info-page {
-    text-align: start;
+    text-align: left;
+  }
+  .list-info-text {
+    width: calc((100% - 24px) / 2);
   }
 }
 @media screen and (min-width: 1158px) {
-  .info-page {
+  .about {
     padding-top: 120px;
     padding-bottom: 120px;
   }
   .list-info {
-    display: flex;
-    flex-direction: row;
+    align-items: flex-start;
+    gap: 24px;
   }
   .list-info-text {
     width: calc((100% - 72px) / 4);
   }
-  .features-icon {
+  .card-icon {
+    width: 264px;
+    height: 112px;
+    border-radius: 4px;
+    border: 1px solid #8e8f99;
+    background-color: #f4f4fd;
+    margin-bottom: 8px;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 112px;
-    background-color: #f4f4fd;
-    border-radius: 4px;
-    border: 1px solid #8e8f99;
-    margin-bottom: 8px;
   }
   .info-page {
-    text-align: start;
-    font-weight: 500;
     font-size: 20px;
+    font-weight: 500;
     line-height: 1.2;
-    letter-spacing: 0.02em;
-    color: #2e2f42;
-    margin-bottom: 8px;
   }
   .info-text {
     font-weight: 400;
