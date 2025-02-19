@@ -321,6 +321,7 @@ body {
   padding: 72px 0;
   margin: 0 auto;
   background-position: center;
+  max-width: 320px;
 }
 @media screen and (min-resolution: 2x) {
   .hero-page {
@@ -378,7 +379,7 @@ body {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(./images/people-office-tab.jpg);
+      url(../images/people-office-tab.jpg);
     max-width: 768px;
     padding: 112px 0;
   }
@@ -388,7 +389,7 @@ body {
           rgba(46, 47, 66, 0.7),
           rgba(46, 47, 66, 0.7)
         ),
-        url(./images/people-office-tab-2x.jpg);
+        url(../images/people-office-tab-2x.jpg);
     }
   }
 }
@@ -475,7 +476,10 @@ body {
   }
 }
 .list-info-text {
-  width: calc((100% - 24px) / 2);
+  width: 100%;
+}
+.list-info-text:hover .overlay-text .list-info-text:focus .overlay-text {
+  transform: translateY(0);
 }
 @media screen and (min-width: 1158px) {
   .about {
@@ -600,7 +604,7 @@ body {
     row-gap: 64px;
   }
   .ot-team-list {
-    flex-basis: calc((100% - 3 * 24px) / 4);
+    flex-basis: 264px;
   }
 }
 @media screen and (min-width: 1158px) {
@@ -638,6 +642,7 @@ body {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
+
 .info-portf {
   font-size: 36px;
   line-height: 1.11;
@@ -651,7 +656,7 @@ body {
   position: relative;
   overflow: hidden;
 }
-.box-overlay:hover .overlay-text {
+.box-overlay:hover {
   transform: translateY(0%);
   overflow: auto;
 }
@@ -723,10 +728,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 108px;
 }
 .footer-social {
-  margin-bottom: 72px;
+  margin-bottom: 0;
 }
 .footer-social-text {
   text-align: center;
@@ -736,7 +740,6 @@ body {
   color: #ffffff;
   margin-bottom: 16px;
   font-size: 16px;
-  padding: 16px;
 }
 .social-list-footer {
   display: flex;
@@ -774,6 +777,7 @@ span {
   letter-spacing: 0.02em;
   width: 264px;
   text-align: start;
+  margin-bottom: 0;
 }
 .footer-logo {
   display: block;
@@ -786,7 +790,7 @@ span {
 .subscribe-form {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 24px;
   justify-content: center;
 }
 .subscribe-input {
@@ -829,20 +833,22 @@ span {
 }
 @media screen and (min-width: 768px) {
   .page-footer {
-    padding: 96px 0 96px 108px;
+    padding: 96px 0;
   }
   .footer-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 72px 24px;
     align-items: flex-start;
     justify-content: flex-start;
     margin: 0 auto;
     width: 100%;
     max-width: 768px;
+    padding: 0 108px;
   }
   .footer-info {
-    margin-bottom: auto;
+    margin-bottom: 0;
   }
   .footer-logo {
     display: flex;
@@ -884,7 +890,6 @@ span {
     display: flex;
     align-items: baseline;
     flex-wrap: nowrap;
-    justify-content: flex-end;
     gap: 0;
     padding: 0 15px;
     width: 100%;
@@ -928,7 +933,7 @@ span {
   pointer-events: auto;
 }
 .modal {
-  padding: 72px 24px 24px 24px;
+  padding: 72px 16px 24px 16px;
   position: absolute;
   top: 50%;
   left: 50%;
